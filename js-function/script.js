@@ -51,11 +51,18 @@
 // const c = a.concat(b);
 // console.log(c)
 
-// const a = [1, 2, 3]
+// const a = [1, 2, 3];
 // const b = a.push(4, 5, 6)
 // const c = a.unshift(4, 5, 6)
+
+// let array = [1, 2, 3]
+// function haha(array){
+//     array.push(4, 5, 6)
+//     array.unshift(4, 5, 6)
+//     return array
+// }
 //
-// console.log(a)
+// console.log(haha(array))
 
 
 
@@ -99,3 +106,20 @@
 // «КаЖдЫй ОхОтНиК», то на выходе должен быть массив
 //     [кАжДыЙ оХоТнИк]
 
+let result = changeLowerUpperCases("КаЖдЫй ОхОтнИк плОхОй");
+
+console.log(result);
+
+
+function changeLowerUpperCases(string){
+    let array = [];
+    for(let i = 0; i < string.length; i++){
+        let letter = string[i];
+        if(letter.toLowerCase() === letter){
+            array.push(letter.toUpperCase());
+        } else {
+            array.push(letter.toLowerCase());
+        }
+    }
+    return array;
+}
